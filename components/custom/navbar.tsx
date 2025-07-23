@@ -33,16 +33,16 @@ export default function Navbar({ data }: { data: Nav[] }) {
   const isMobile = useMemo(() => width < 1280, [width]);
 
   return (
-    <div className="flex gap-2 p-4 md:p-5 items-center justify-between">
-      <div className="flex gap-12 items-center">
+    <div className="flex gap-2 p-4 md:p-5 items-center justify-between max-w-[1200px] w-full mx-auto">
+      <div className="flex gap-8 items-center">
         <Link
           href={"/"}
           className="text-custom-blue font-bold text-xl whitespace-nowrap"
         >
-          Software Recruitment co.
+          {isMobile ? "SR Co." : "Software Recruitment co."}
         </Link>
         {!isMobile && (
-          <div className="flex gap-8 items-center">
+          <div className="flex gap-7 items-center">
             {data.length > 0 &&
               data.map((d, idx) => {
                 if (d.children && d.children.length > 0) {
@@ -51,7 +51,7 @@ export default function Navbar({ data }: { data: Nav[] }) {
                       <DropdownMenuTrigger asChild>
                         <Button
                           variant={"ghost"}
-                          className="data-[state=open]:[&>svg]:-rotate-180"
+                          className="data-[state=open]:[&>svg]:-rotate-180 px-0! hover:bg-transparent hover:text-foreground/60"
                         >
                           {d.title}{" "}
                           <Triangle className="fill-custom-blue stroke-transparent -rotate-90 !h-3 transition-all" />
@@ -73,7 +73,12 @@ export default function Navbar({ data }: { data: Nav[] }) {
                 } else {
                   return (
                     <Link key={idx} href={d.href || "#"}>
-                      <Button variant={"ghost"}>{d.title}</Button>
+                      <Button
+                        variant={"ghost"}
+                        className="px-0! hover:bg-transparent hover:text-foreground/60"
+                      >
+                        {d.title}
+                      </Button>
                     </Link>
                   );
                 }
