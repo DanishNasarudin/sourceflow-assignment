@@ -76,6 +76,8 @@ export default function HeroInput({
           className="rounded-xl p-0 overflow-clip"
           sideOffset={8}
           align="start"
+          side="bottom"
+          avoidCollisions={false}
           onOpenAutoFocus={(e) => e.preventDefault()}
         >
           <ScrollArea className={cn(suggestions.length >= 4 && "h-[200px]")}>
