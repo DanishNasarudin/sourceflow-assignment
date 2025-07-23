@@ -4,7 +4,7 @@ import SmartImage from "./smart-image";
 export default function Client() {
   return (
     <div className="max-w-[1200px] w-full mx-auto flex flex-col items-center p-4 md:p-5 py-14! pb-18! gap-8 select-none">
-      <p className="text-foreground/30">Who we work with</p>
+      <p className="text-foreground/30 cursor-default">Who we work with</p>
       <div className="flex overflow-x-hidden gap-14 w-full relative">
         <div className="flex whitespace-nowrap shrink-0 gap-14 animate-marquee">
           {logo.length > 0 &&

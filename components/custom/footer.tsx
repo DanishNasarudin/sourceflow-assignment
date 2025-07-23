@@ -75,7 +75,7 @@ export default function Footer({ data }: { data: Nav[] }) {
           {data.length > 0 &&
             data.map((d, idx) => (
               <div key={idx} className="space-y-4">
-                <h3 className="text-3xl font-bold">{d.title}</h3>
+                <h3 className="text-3xl font-bold cursor-default">{d.title}</h3>
                 <div className="flex flex-col gap-4">
                   {d.children &&
                     d.children.map((c, idxC) => (

@@ -16,12 +16,26 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!;
+
 export const metadata: Metadata = {
   title: {
     default: "Software Recruitment co.",
     template: "%s | Software Recruitment co.",
   },
-  description: "Developed by Danish Nasarudin",
+  description: "Developed by Danish Nasarudin.",
+  icons: {
+    icon: [{ url: new URL("/favicon.ico", baseUrl), type: "image/x-icon" }],
+  },
+  openGraph: {
+    siteName: "Software Recruitment",
+    title: "Software Recruitment co.",
+    description: "Developed by Danish Nasarudin.",
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({

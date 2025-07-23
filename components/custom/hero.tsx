@@ -7,7 +7,7 @@ export default function Hero({ data }: { data: string[] }) {
     <div className="h-[min(42rem,max(max-content,50vw))] bg-custom-blue overflow-clip">
       <div className="relative max-w-[1200px] w-full h-full mx-auto p-4 md:p-5 py-14! flex md:flex-row flex-col items-center gap-8">
         <div className="flex-1 flex flex-col justify-center gap-8 h-full z-[2]">
-          <div className="flex flex-col gap-2 md:items-start items-center md:text-start text-center select-none">
+          <div className="flex flex-col gap-2 md:items-start items-center md:text-start text-center select-none cursor-default">
             <p className="text-background">Software Recruitment Specialists</p>
             <h1 className="text-4xl lg:text-6xl font-bold text-background">
               Elevate your career
