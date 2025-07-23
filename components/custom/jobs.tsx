@@ -23,7 +23,7 @@ export default function Jobs({ data }: { data: JobType[] }) {
   if (width === 0) return null;
 
   return (
-    <div className="bg-[#D7E7FB]">
+    <div className="bg-[#D7E7FB] select-none">
       <div className="max-w-[1200px] w-full mx-auto p-4 md:p-5 py-14! pb-28! flex flex-col items-center gap-8">
         <h2 className="text-4xl font-bold text-[#0E2152]">Latest Jobs</h2>
         <Carousel className="w-full" opts={{ slidesToScroll }}>
