@@ -63,7 +63,7 @@ export default function HeroInput({
             />
             <button
               type="button"
-              className="cursor-pointer font-medium text-[#25210E] bg-custom-yellow hover:bg-custom-yellow/80 p-4 px-5 whitespace-nowrap"
+              className="cursor-pointer font-medium text-[#25210E] bg-custom-yellow hover:bg-custom-yellow/80 p-4 px-5 whitespace-nowrap transition-all"
               onClick={(e) => {
                 e.stopPropagation();
               }}

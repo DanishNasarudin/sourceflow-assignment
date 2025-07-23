@@ -1,6 +1,6 @@
 import hero from "@/public/hero.jpg";
-import Image from "next/image";
 import HeroInput from "./hero-input";
+import SmartImage from "./smart-image";
 
 export default function Hero({ data }: { data: string[] }) {
   return (
@@ -16,11 +16,12 @@ export default function Hero({ data }: { data: string[] }) {
           <HeroInput lists={data} />
         </div>
         <div className="flex-1 h-full flex items-center z-[2] md:w-auto w-[60vw]">
-          <Image
+          <SmartImage
             src={hero.src}
             alt="Hero"
             height={hero.height}
             width={hero.width}
+            priority
             className="aspect-[25/24] w-full object-cover object-[100%_50%] rounded-4xl"
           />
         </div>
