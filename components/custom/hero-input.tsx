@@ -1,6 +1,8 @@
 "use client";
 import { cn } from "@/lib/utils";
+import { X } from "lucide-react";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { Button } from "../ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { ScrollArea } from "../ui/scroll-area";
 
@@ -49,18 +51,33 @@ export default function HeroInput({
             )}
             onClick={(e) => e.preventDefault()}
           >
-            <input
-              className="w-full px-4"
-              placeholder="E.g. networking"
-              value={input}
-              onChange={(e) => {
-                e.stopPropagation();
-                handleChange(e.target.value);
-              }}
-              onClick={(e) => e.stopPropagation()}
-              onFocus={() => setIsFocused(true)}
-              onBlur={() => setIsFocused(false)}
-            />
+            <div className="relative flex w-full items-center">
+              <input
+                className="w-full pl-4 outline-none ring-0"
+                placeholder="E.g. networking"
+                value={input}
+                onChange={(e) => {
+                  e.stopPropagation();
+                  handleChange(e.target.value);
+                }}
+                onClick={(e) => e.stopPropagation()}
+                onFocus={() => setIsFocused(true)}
+                onBlur={() => setIsFocused(false)}
+              />
+              {input !== "" && (
+                <Button
+                  variant={"ghost"}
+                  size={"icon"}
+                  className="text-foreground/60"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleChange("");
+                  }}
+                >
+                  <X />
+                </Button>
+              )}
+            </div>
             <button
               type="button"
               className="cursor-pointer font-medium text-[#25210E] bg-custom-yellow hover:bg-custom-yellow/80 p-4 px-5 whitespace-nowrap transition-all select-none"
