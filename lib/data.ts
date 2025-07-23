@@ -46,6 +46,9 @@ export const navList: Nav[] = [
       },
     ],
   },
+  {
+    title: "Cloud",
+  },
 ];
 
 export const navFooterList: Nav[] = [
