@@ -1,3 +1,4 @@
+import Client from "@/components/custom/client";
 import Hero from "@/components/custom/hero";
 import { data } from "@/lib/data";
 
@@ -6,6 +7,7 @@ export default function Home() {
   return (
     <div className="flex-1">
       <Hero data={jobData.map((j) => j.title)} />
+      <Client />
     </div>
   );
 }

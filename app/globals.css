@@ -45,6 +45,16 @@
   --color-custom-blue: var(--custom-blue);
   --color-custom-yellow: var(--custom-yellow);
   --color-custom-orange: var(--custom-orange);
+
+  --animate-marquee: marquee 20s linear infinite;
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-107.3%);
+    }
+  }
 }
 
 :root {

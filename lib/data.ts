@@ -1,5 +1,11 @@
+import microsoft from "@/public/logo/logo-0.png";
+import oracle from "@/public/logo/logo-1.png";
+import atlassian from "@/public/logo/logo-2.png";
+import cloudflare from "@/public/logo/logo-3.png";
+import vmware from "@/public/logo/logo-4.png";
 import { Job } from "@/types/job";
 import { Nav } from "@/types/navbar";
+import { StaticImageData } from "next/image";
 
 export const navList: Nav[] = [
   {
@@ -180,5 +186,31 @@ export const data: Job[] = [
     shortDescription:
       "Odio mi amet commodo convallis nunc. Tincidunt mauris eu egestas eget in aliquam.",
     createdAt: new Date(),
+  },
+];
+
+export const logo: {
+  name: string;
+  image: StaticImageData;
+}[] = [
+  {
+    name: "Microsoft",
+    image: microsoft,
+  },
+  {
+    name: "Oracle",
+    image: oracle,
+  },
+  {
+    name: "Atlassian",
+    image: atlassian,
+  },
+  {
+    name: "CloudFlare",
+    image: cloudflare,
+  },
+  {
+    name: "VMWare",
+    image: vmware,
   },
 ];
