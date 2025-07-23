@@ -1,5 +1,6 @@
+import Footer from "@/components/custom/footer";
 import Navbar from "@/components/custom/navbar";
-import { navList } from "@/lib/data";
+import { navFooterList, navList } from "@/lib/data";
 import Providers from "@/lib/providers";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -29,14 +30,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const navData = navList;
+  const navFooterData = navFooterList;
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col gap-2`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <Providers>
           <Navbar data={navData} />
           {children}
+          <Footer data={navFooterData} />
         </Providers>
       </body>
     </html>

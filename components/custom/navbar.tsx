@@ -33,7 +33,7 @@ export default function Navbar({ data }: { data: Nav[] }) {
   const isMobile = useMemo(() => width < 1280, [width]);
 
   return (
-    <div className="flex gap-2 p-4 md:p-5 items-center justify-between max-w-[1200px] w-full mx-auto">
+    <div className="sticky top-0 z-[10] bg-background/80 backdrop-blur-md flex gap-2 p-4 md:p-5 items-center justify-between max-w-[1200px] w-full mx-auto">
       <div className="flex gap-8 items-center">
         <Link
           href={"/"}

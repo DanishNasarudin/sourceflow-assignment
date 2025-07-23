@@ -10,7 +10,6 @@ export default function Home() {
       <Hero data={jobData.map((j) => j.title)} />
       <Client />
       <Jobs data={jobData} />
-      <section className="h-[200px]"></section>
     </div>
   );
 }
